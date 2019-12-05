@@ -40,6 +40,8 @@ void Covari::covari_callback(const geometry_msgs::PoseWithCovarianceStamped::Con
     // ROS_INFO("%lf",covari_msg->pose.covariance);
 
     outFile << "seq : " << covari_msg->header.seq << std::endl;
+    outFile << "stamp.sec : " << covari_msg->header.stamp.sec << std::endl;
+    outFile << "stamp.nsec : " << covari_msg->header.stamp.nsec << std::endl;
     outFile << "frame_id : " << covari_msg->header.frame_id << std::endl;
 
     outFile << "position x : " << covari_msg->pose.pose.position.x << std::endl;
